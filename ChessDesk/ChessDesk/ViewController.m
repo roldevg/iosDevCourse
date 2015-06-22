@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) UIView *containerForBoard;
+@property (strong, nonatomic) NSMutableArray *fieldsSecondColorCells;
 @end
 
 @implementation ViewController
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    _fieldsSecondColorCells = [[NSMutableArray alloc] init];
     
     [self drawBoard];
 }
@@ -37,7 +40,7 @@
     
     int numberOfCells = 8;
     CGFloat chessBoardWidth = self.containerForBoard.bounds.size.width - 4 * 2; // left and right bounds
-    CGFloat chessBoardCellWidth = chessBoardWidth / numberOfCells ;
+    CGFloat chessBoardCellWidth = chessBoardWidth / numberOfCells;
     
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
@@ -46,6 +49,28 @@
                                                                             chessBoardCellWidth, chessBoardCellWidth)];
                 cellView.backgroundColor = [UIColor blackColor];
                 [self.containerForBoard addSubview:cellView];
+                [self.fieldsSecondColorCells addObject:cellView];
+            }
+        }
+    }
+    
+    // draw checkers
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if ((i + j) % 2 == 0) {
+                CGFloat originForChecker = chessBoardCellWidth * 0.2;
+                UIView *squareView = [[UIView alloc] initWithFrame:CGRectMake(chessBoardCellWidth * j + 4 + originForChecker, chessBoardCellWidth * i + 4 + originForChecker,
+                                                                              chessBoardCellWidth - originForChecker * 2, chessBoardCellWidth - originForChecker * 2)];
+                squareView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
+                                              UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+                
+                if (i < 3) {
+                    squareView.backgroundColor = [UIColor redColor];
+                    [self.containerForBoard addSubview:squareView];
+                } else if (i > 4) {
+                    squareView.backgroundColor = [UIColor greenColor];
+                    [self.containerForBoard addSubview:squareView];
+                }
             }
         }
     }
@@ -59,8 +84,8 @@
     
     UIColor *newColor = [UIColor colorWithRed:r green:g blue:b alpha:0.8];
     
-    for (UIView *view in self.containerForBoard.subviews) {
-        view.backgroundColor = newColor;
+    for (UIView* field in self.fieldsSecondColorCells) {
+        field.backgroundColor = newColor;
     }
 }
 
