@@ -11,6 +11,8 @@
 @interface ViewController ()
 @property (weak, nonatomic) UIView *containerForBoard;
 @property (strong, nonatomic) NSMutableArray *fieldsSecondColorCells;
+@property (strong, nonatomic) NSMutableArray *firstPlayerCheckers;
+@property (strong, nonatomic) NSMutableArray *secondPlayerCheckers;
 @end
 
 @implementation ViewController
@@ -20,6 +22,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _fieldsSecondColorCells = [[NSMutableArray alloc] init];
+    _firstPlayerCheckers = [[NSMutableArray alloc] init];
+    _secondPlayerCheckers = [[NSMutableArray alloc] init];
     
     [self drawBoard];
 }
@@ -67,12 +71,36 @@
                 if (i < 3) {
                     squareView.backgroundColor = [UIColor redColor];
                     [self.containerForBoard addSubview:squareView];
+                    [self.firstPlayerCheckers addObject:squareView];
                 } else if (i > 4) {
                     squareView.backgroundColor = [UIColor greenColor];
                     [self.containerForBoard addSubview:squareView];
+                    [self.secondPlayerCheckers addObject:squareView];
                 }
             }
         }
+    }
+}
+
+- (void) swapCheckers:(UIView*) checkerFirst
+                     :(UIView*) checkerSecond {
+    [UIView animateWithDuration:1 animations:^{
+        CGRect frameFirst = checkerFirst.frame;
+        CGRect frameSecond = checkerSecond.frame;
+        
+        [self.containerForBoard bringSubviewToFront:checkerFirst];
+        checkerFirst.frame = frameSecond;
+        
+        [self.containerForBoard bringSubviewToFront:checkerSecond];
+        checkerSecond.frame = frameFirst;
+    }];
+}
+
+- (void) swapRandomAmmountOfCheckers {
+    NSUInteger countOfSwaps = arc4random() % [self.firstPlayerCheckers count];
+    
+    for (int i = 0; i < countOfSwaps; i++) {
+        [self swapCheckers:[self.firstPlayerCheckers objectAtIndex:i] :[self.secondPlayerCheckers objectAtIndex:i]];
     }
 }
 
@@ -87,6 +115,8 @@
     for (UIView* field in self.fieldsSecondColorCells) {
         field.backgroundColor = newColor;
     }
+    
+    [self swapRandomAmmountOfCheckers];
 }
 
 - (void)didReceiveMemoryWarning {
