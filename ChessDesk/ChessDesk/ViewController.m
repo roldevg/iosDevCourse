@@ -67,6 +67,7 @@
                                                                               chessBoardCellWidth - originForChecker * 2, chessBoardCellWidth - originForChecker * 2)];
                 squareView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
                                               UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+                squareView.layer.cornerRadius = chessBoardCellWidth * 0.3;
                 
                 if (i < 3) {
                     squareView.backgroundColor = [UIColor redColor];
