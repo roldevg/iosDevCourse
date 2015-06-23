@@ -13,8 +13,10 @@
 @property (weak, nonatomic) NSString* name;
 @property (assign, nonatomic) NSUInteger height;
 @property (assign, nonatomic) NSUInteger weight;
-@property (assign, nonatomic) BOOL sex; // Use ENUM, Luck!
+@property (assign, nonatomic) NSString* sex; // Use ENUM, Luck!
 
 - (void) move;
+
+- (void)printInfo;
 
 @end

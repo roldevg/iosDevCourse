@@ -14,4 +14,11 @@
     NSLog(@"%@ moves", self.name);
 }
 
+- (void)printInfo {
+    NSLog(@"Name: %@", self.name);
+    NSLog(@"Height: %ld", self.height);
+    NSLog(@"Weight: %ld", self.weight);
+    NSLog(@"Sex: %@", self.sex);
+}
+
 @end

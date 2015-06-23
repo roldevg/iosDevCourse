@@ -24,19 +24,38 @@
     
     Human* human = [[Human alloc] init];
     human.name = @"Some human";
+    human.weight = 100;
+    human.height = 180;
+    human.sex = @"male";
     [human move];
     
     Cycler* cycler = [[Cycler alloc] init];
     cycler.name = @"Lance Armstrong";
+    cycler.weight = 70;
+    cycler.height = 170;
+    cycler.sex = @"male";
     [cycler move];
     
     Runner* runner = [[Runner alloc] init];
     runner.name = @"Usain Bolt";
+    runner.weight = 72;
+    runner.height = 169;
+    runner.sex = @"male";
     [runner move];
     
     Swimmer* swimmer = [[Swimmer alloc] init];
     swimmer.name = @"Michael Phelps";
+    swimmer.weight = 76;
+    swimmer.height = 1750;
+    swimmer.sex = @"female";
     [swimmer move];
+    
+    NSArray* crowdPeople = [NSArray arrayWithObjects:human, cycler, runner, swimmer, nil];
+    
+    for (int i = 0; i < [crowdPeople count]; i++) {
+        Human* human = crowdPeople[i];
+        [human printInfo];
+    }
     
     return YES;
 }
