@@ -10,4 +10,8 @@
 
 @implementation Cycler
 
+- (void) move {
+    NSLog(@"Cycler rides");
+}
+
 @end

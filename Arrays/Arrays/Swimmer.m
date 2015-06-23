@@ -11,7 +11,7 @@
 @implementation Swimmer
 
 - (void) move {
-    NSLog(@"Swimmer moving");
+    NSLog(@"Swimmer swims");
 }
 
 @end

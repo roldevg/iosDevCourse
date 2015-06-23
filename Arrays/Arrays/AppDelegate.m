@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "Human.h"
+#import "Cycler.h"
+#import "Runner.h"
+#import "Swimmer.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +23,20 @@
     // Override point for customization after application launch.
     
     Human* human = [[Human alloc] init];
-    human.name = @"Jordan";
+    human.name = @"Some human";
     [human move];
+    
+    Cycler* cycler = [[Cycler alloc] init];
+    cycler.name = @"Lance Armstrong";
+    [cycler move];
+    
+    Runner* runner = [[Runner alloc] init];
+    runner.name = @"Usain Bolt";
+    [runner move];
+    
+    Swimmer* swimmer = [[Swimmer alloc] init];
+    swimmer.name = @"Michael Phelps";
+    [swimmer move];
     
     return YES;
 }

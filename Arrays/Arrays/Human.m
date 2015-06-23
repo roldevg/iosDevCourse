@@ -11,7 +11,7 @@
 @implementation Human
 
 - (void) move {
-    NSLog(@"%@ is moving", self.name);
+    NSLog(@"%@ moves", self.name);
 }
 
 @end

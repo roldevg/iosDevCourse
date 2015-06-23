@@ -10,4 +10,8 @@
 
 @implementation Runner
 
+- (void) move {
+    NSLog(@"Runner runs");
+}
+
 @end
