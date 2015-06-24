@@ -28,6 +28,8 @@
     [self drawBoard];
 }
 
+#pragma - Draw methods
+
 - (void) drawBoard {
     
     CGFloat screenWidth = self.view.bounds.size.width;
@@ -83,26 +85,7 @@
     }
 }
 
-- (void) swapCheckers:(UIView*) checkerFirst and:(UIView*) checkerSecond {
-    [UIView animateWithDuration:1 animations:^{
-        CGRect frameFirst = checkerFirst.frame;
-        CGRect frameSecond = checkerSecond.frame;
-        
-        [self.containerForBoard bringSubviewToFront:checkerFirst];
-        checkerFirst.frame = frameSecond;
-        
-        [self.containerForBoard bringSubviewToFront:checkerSecond];
-        checkerSecond.frame = frameFirst;
-    }];
-}
-
-- (void) swapRandomAmmountOfCheckers {
-    NSUInteger countOfSwaps = arc4random() % [self.firstPlayerCheckers count];
-    
-    for (int i = 0; i < countOfSwaps; i++) {
-        [self swapCheckers:[self.firstPlayerCheckers objectAtIndex:i] and:[self.secondPlayerCheckers objectAtIndex:i]];
-    }
-}
+#pragma - Rotate screen
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     CGFloat r = (CGFloat) (arc4random() % 255) / 255.f;
@@ -114,8 +97,31 @@
     for (UIView* field in self.fieldsSecondColorCells) {
         field.backgroundColor = newColor;
     }
-
+    
     [self swapRandomAmmountOfCheckers];
+}
+
+#pragma - Swap checkers methods
+
+- (void) swapRandomAmmountOfCheckers {
+    NSUInteger countOfSwaps = arc4random() % [self.firstPlayerCheckers count];
+    
+    for (int i = 0; i < countOfSwaps; i++) {
+        [self swapCheckers:[self.firstPlayerCheckers objectAtIndex:i] and:[self.secondPlayerCheckers objectAtIndex:i]];
+    }
+}
+
+- (void) swapCheckers:(UIView*) checkerFirst and:(UIView*) checkerSecond {
+    [UIView animateWithDuration:1 animations:^{
+        CGRect frameFirst = checkerFirst.frame;
+        CGRect frameSecond = checkerSecond.frame;
+        
+        [self.containerForBoard bringSubviewToFront:checkerFirst];
+        checkerFirst.frame = frameSecond;
+        
+        [self.containerForBoard bringSubviewToFront:checkerSecond];
+        checkerSecond.frame = frameFirst;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
