@@ -21,9 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _fieldsSecondColorCells = [[NSMutableArray alloc] init];
-    _firstPlayerCheckers = [[NSMutableArray alloc] init];
-    _secondPlayerCheckers = [[NSMutableArray alloc] init];
+    self.fieldsSecondColorCells = [NSMutableArray array];
+    self.firstPlayerCheckers = [NSMutableArray array];
+    self.secondPlayerCheckers = [NSMutableArray array];
     
     [self drawBoard];
 }
@@ -83,8 +83,7 @@
     }
 }
 
-- (void) swapCheckers:(UIView*) checkerFirst
-                     :(UIView*) checkerSecond {
+- (void) swapCheckers:(UIView*) checkerFirst and:(UIView*) checkerSecond {
     [UIView animateWithDuration:1 animations:^{
         CGRect frameFirst = checkerFirst.frame;
         CGRect frameSecond = checkerSecond.frame;
@@ -101,12 +100,11 @@
     NSUInteger countOfSwaps = arc4random() % [self.firstPlayerCheckers count];
     
     for (int i = 0; i < countOfSwaps; i++) {
-        [self swapCheckers:[self.firstPlayerCheckers objectAtIndex:i] :[self.secondPlayerCheckers objectAtIndex:i]];
+        [self swapCheckers:[self.firstPlayerCheckers objectAtIndex:i] and:[self.secondPlayerCheckers objectAtIndex:i]];
     }
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     CGFloat r = (CGFloat) (arc4random() % 255) / 255.f;
     CGFloat g = (CGFloat) (arc4random() % 255) / 255.f;
     CGFloat b = (CGFloat) (arc4random() % 255) / 255.f;
@@ -116,7 +114,7 @@
     for (UIView* field in self.fieldsSecondColorCells) {
         field.backgroundColor = newColor;
     }
-    
+
     [self swapRandomAmmountOfCheckers];
 }
 
