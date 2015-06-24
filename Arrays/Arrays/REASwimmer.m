@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Evgeniy Roldukhin. All rights reserved.
 //
 
-#import "Swimmer.h"
+#import "REASwimmer.h"
 
-@implementation Swimmer
+@implementation REASwimmer
 
 - (void) move {
     NSLog(@"Swimmer swims");

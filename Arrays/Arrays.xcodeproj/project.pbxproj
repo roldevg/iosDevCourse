@@ -14,10 +14,10 @@
 		A46A35231B39F5C300DBDC6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46A35221B39F5C300DBDC6B /* Images.xcassets */; };
 		A46A35261B39F5C300DBDC6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A35241B39F5C300DBDC6B /* LaunchScreen.xib */; };
 		A46A35321B39F5C300DBDC6B /* ArraysTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A35311B39F5C300DBDC6B /* ArraysTests.m */; };
-		A46A353D1B39F73400DBDC6B /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A353C1B39F73400DBDC6B /* Human.m */; };
-		A46A35401B39FB0800DBDC6B /* Cycler.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A353F1B39FB0800DBDC6B /* Cycler.m */; };
-		A46A35431B39FBEC00DBDC6B /* Runner.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A35421B39FBEC00DBDC6B /* Runner.m */; };
-		A46A35481B39FC6F00DBDC6B /* Swimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A35471B39FC6F00DBDC6B /* Swimmer.m */; };
+		A46A353D1B39F73400DBDC6B /* REAHuman.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A353C1B39F73400DBDC6B /* REAHuman.m */; };
+		A46A35401B39FB0800DBDC6B /* REACycler.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A353F1B39FB0800DBDC6B /* REACycler.m */; };
+		A46A35431B39FBEC00DBDC6B /* REARunner.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A35421B39FBEC00DBDC6B /* REARunner.m */; };
+		A46A35481B39FC6F00DBDC6B /* REASwimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A35471B39FC6F00DBDC6B /* REASwimmer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,14 +44,14 @@
 		A46A352B1B39F5C300DBDC6B /* ArraysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArraysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A35301B39F5C300DBDC6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46A35311B39F5C300DBDC6B /* ArraysTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArraysTests.m; sourceTree = "<group>"; };
-		A46A353B1B39F73400DBDC6B /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
-		A46A353C1B39F73400DBDC6B /* Human.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
-		A46A353E1B39FB0800DBDC6B /* Cycler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cycler.h; sourceTree = "<group>"; };
-		A46A353F1B39FB0800DBDC6B /* Cycler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cycler.m; sourceTree = "<group>"; };
-		A46A35411B39FBEC00DBDC6B /* Runner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Runner.h; sourceTree = "<group>"; };
-		A46A35421B39FBEC00DBDC6B /* Runner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Runner.m; sourceTree = "<group>"; };
-		A46A35461B39FC6F00DBDC6B /* Swimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swimmer.h; sourceTree = "<group>"; };
-		A46A35471B39FC6F00DBDC6B /* Swimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Swimmer.m; sourceTree = "<group>"; };
+		A46A353B1B39F73400DBDC6B /* REAHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REAHuman.h; sourceTree = "<group>"; };
+		A46A353C1B39F73400DBDC6B /* REAHuman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REAHuman.m; sourceTree = "<group>"; };
+		A46A353E1B39FB0800DBDC6B /* REACycler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REACycler.h; sourceTree = "<group>"; };
+		A46A353F1B39FB0800DBDC6B /* REACycler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REACycler.m; sourceTree = "<group>"; };
+		A46A35411B39FBEC00DBDC6B /* REARunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REARunner.h; sourceTree = "<group>"; };
+		A46A35421B39FBEC00DBDC6B /* REARunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REARunner.m; sourceTree = "<group>"; };
+		A46A35461B39FC6F00DBDC6B /* REASwimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REASwimmer.h; sourceTree = "<group>"; };
+		A46A35471B39FC6F00DBDC6B /* REASwimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REASwimmer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,14 +135,14 @@
 		A46A35441B39FC2700DBDC6B /* Humans */ = {
 			isa = PBXGroup;
 			children = (
-				A46A353B1B39F73400DBDC6B /* Human.h */,
-				A46A353C1B39F73400DBDC6B /* Human.m */,
-				A46A353E1B39FB0800DBDC6B /* Cycler.h */,
-				A46A353F1B39FB0800DBDC6B /* Cycler.m */,
-				A46A35411B39FBEC00DBDC6B /* Runner.h */,
-				A46A35421B39FBEC00DBDC6B /* Runner.m */,
-				A46A35461B39FC6F00DBDC6B /* Swimmer.h */,
-				A46A35471B39FC6F00DBDC6B /* Swimmer.m */,
+				A46A353B1B39F73400DBDC6B /* REAHuman.h */,
+				A46A353C1B39F73400DBDC6B /* REAHuman.m */,
+				A46A353E1B39FB0800DBDC6B /* REACycler.h */,
+				A46A353F1B39FB0800DBDC6B /* REACycler.m */,
+				A46A35411B39FBEC00DBDC6B /* REARunner.h */,
+				A46A35421B39FBEC00DBDC6B /* REARunner.m */,
+				A46A35461B39FC6F00DBDC6B /* REASwimmer.h */,
+				A46A35471B39FC6F00DBDC6B /* REASwimmer.m */,
 			);
 			name = Humans;
 			sourceTree = "<group>";
@@ -248,12 +248,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A46A351E1B39F5C300DBDC6B /* ViewController.m in Sources */,
-				A46A35431B39FBEC00DBDC6B /* Runner.m in Sources */,
+				A46A35431B39FBEC00DBDC6B /* REARunner.m in Sources */,
 				A46A351B1B39F5C300DBDC6B /* AppDelegate.m in Sources */,
 				A46A35181B39F5C300DBDC6B /* main.m in Sources */,
-				A46A353D1B39F73400DBDC6B /* Human.m in Sources */,
-				A46A35401B39FB0800DBDC6B /* Cycler.m in Sources */,
-				A46A35481B39FC6F00DBDC6B /* Swimmer.m in Sources */,
+				A46A353D1B39F73400DBDC6B /* REAHuman.m in Sources */,
+				A46A35401B39FB0800DBDC6B /* REACycler.m in Sources */,
+				A46A35481B39FC6F00DBDC6B /* REASwimmer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,14 +1,17 @@
 //
-//  Cycler.h
+//  Runner.m
 //  Arrays
 //
 //  Created by Evgeniy Roldukhin on 6/23/15.
 //  Copyright (c) 2015 Evgeniy Roldukhin. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "Human.h"
+#import "REARunner.h"
 
-@interface Cycler : Human
+@implementation REARunner
+
+- (void) move {
+    NSLog(@"Runner runs");
+}
 
 @end

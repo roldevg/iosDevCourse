@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "Human.h"
-#import "Cycler.h"
-#import "Runner.h"
-#import "Swimmer.h"
+#import "REAHuman.h"
+#import "REACycler.h"
+#import "REARunner.h"
+#import "REASwimmer.h"
 
 @interface AppDelegate ()
 
@@ -22,28 +22,28 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    Human* human = [[Human alloc] init];
+    REAHuman* human = [[REAHuman alloc] init];
     human.name = @"Some human";
     human.weight = 100;
     human.height = 180;
     human.gender = GenderFemale;
     [human move];
     
-    Cycler* cycler = [[Cycler alloc] init];
+    REACycler* cycler = [[REACycler alloc] init];
     cycler.name = @"Lance Armstrong";
     cycler.weight = 70;
     cycler.height = 170;
     cycler.gender = GenderMale;
     [cycler move];
     
-    Runner* runner = [[Runner alloc] init];
+    REARunner* runner = [[REARunner alloc] init];
     runner.name = @"Usain Bolt";
     runner.weight = 72;
     runner.height = 169;
     runner.gender = GenderMale;
     [runner move];
     
-    Swimmer* swimmer = [[Swimmer alloc] init];
+    REASwimmer* swimmer = [[REASwimmer alloc] init];
     swimmer.name = @"Michael Phelps";
     swimmer.weight = 76;
     swimmer.height = 1750;
@@ -53,7 +53,7 @@
     NSArray* crowdPeople = [NSArray arrayWithObjects:human, cycler, runner, swimmer, nil];
     
     for (int i = 0; i < [crowdPeople count]; i++) {
-        Human* human = crowdPeople[i];
+        REAHuman* human = crowdPeople[i];
         NSLog(@"%@", human);
     }
     

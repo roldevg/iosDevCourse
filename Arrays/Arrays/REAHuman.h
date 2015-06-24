@@ -13,7 +13,7 @@ typedef enum {
     GenderFemale = 1
 } Gender;
 
-@interface Human : NSObject
+@interface REAHuman : NSObject
 
 @property (weak, nonatomic) NSString* name;
 @property (assign, nonatomic) NSUInteger height;

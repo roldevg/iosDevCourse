@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Evgeniy Roldukhin. All rights reserved.
 //
 
-#import "Cycler.h"
+#import "REACycler.h"
 
-@implementation Cycler
+@implementation REACycler
 
 - (void) move {
     NSLog(@"Cycler rides");

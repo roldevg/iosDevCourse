@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Human.h"
+#import "REAHuman.h"
 
-@interface Runner : Human
+@interface REARunner : REAHuman
 
 @end

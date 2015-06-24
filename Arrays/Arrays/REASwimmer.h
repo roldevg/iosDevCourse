@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Evgeniy Roldukhin. All rights reserved.
 //
 
-#import "Human.h"
+#import "REAHuman.h"
 
-@interface Swimmer : Human
+@interface REASwimmer : REAHuman
 
 @end

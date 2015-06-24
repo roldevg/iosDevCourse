@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Evgeniy Roldukhin. All rights reserved.
 //
 
-#import "Human.h"
+#import "REAHuman.h"
 
-@implementation Human
+@implementation REAHuman
 
 - (void) move {
     NSLog(@"%@ moves", self.name);
