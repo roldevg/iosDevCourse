@@ -14,11 +14,8 @@
     NSLog(@"%@ moves", self.name);
 }
 
-- (void)printInfo {
-    NSLog(@"Name: %@", self.name);
-    NSLog(@"Height: %ld", self.height);
-    NSLog(@"Weight: %ld", self.weight);
-    NSLog(@"Sex: %@", self.sex);
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Name: %@, Height: %ld, Weight: %ld, Sex: %@", self.name, self.height, self.weight, self.sex];
 }
 
 @end

@@ -17,6 +17,4 @@
 
 - (void) move;
 
-- (void)printInfo;
-
 @end

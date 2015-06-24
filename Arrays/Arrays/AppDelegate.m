@@ -54,7 +54,7 @@
     
     for (int i = 0; i < [crowdPeople count]; i++) {
         Human* human = crowdPeople[i];
-        [human printInfo];
+        NSLog(@"%@", human);
     }
     
     return YES;
