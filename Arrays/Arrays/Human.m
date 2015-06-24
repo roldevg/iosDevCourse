@@ -15,7 +15,13 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"Name: %@, Height: %ld, Weight: %ld, Sex: %@", self.name, self.height, self.weight, self.sex];
+    NSString* genderText = @"";
+    if (self.gender == GenderFemale) {
+        genderText = @"female";
+    } else {
+        genderText = @"male";
+    }
+    return [NSString stringWithFormat:@"Name: %@, Height: %ld, Weight: %ld, Gender: %@", self.name, self.height, self.weight, genderText];
 }
 
 @end

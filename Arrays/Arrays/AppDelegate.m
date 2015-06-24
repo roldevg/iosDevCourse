@@ -26,28 +26,28 @@
     human.name = @"Some human";
     human.weight = 100;
     human.height = 180;
-    human.sex = @"male";
+    human.gender = GenderFemale;
     [human move];
     
     Cycler* cycler = [[Cycler alloc] init];
     cycler.name = @"Lance Armstrong";
     cycler.weight = 70;
     cycler.height = 170;
-    cycler.sex = @"male";
+    cycler.gender = GenderMale;
     [cycler move];
     
     Runner* runner = [[Runner alloc] init];
     runner.name = @"Usain Bolt";
     runner.weight = 72;
     runner.height = 169;
-    runner.sex = @"male";
+    runner.gender = GenderMale;
     [runner move];
     
     Swimmer* swimmer = [[Swimmer alloc] init];
     swimmer.name = @"Michael Phelps";
     swimmer.weight = 76;
     swimmer.height = 1750;
-    swimmer.sex = @"female";
+    swimmer.gender = GenderMale;
     [swimmer move];
     
     NSArray* crowdPeople = [NSArray arrayWithObjects:human, cycler, runner, swimmer, nil];

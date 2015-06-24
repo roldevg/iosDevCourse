@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    GenderMale = 0,
+    GenderFemale = 1
+} Gender;
+
 @interface Human : NSObject
 
 @property (weak, nonatomic) NSString* name;
 @property (assign, nonatomic) NSUInteger height;
 @property (assign, nonatomic) NSUInteger weight;
-@property (assign, nonatomic) NSString* sex; // Use ENUM, Luck!
+@property (assign, nonatomic) Gender gender;
 
 - (void) move;
 
