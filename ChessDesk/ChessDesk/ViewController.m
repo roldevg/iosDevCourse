@@ -28,7 +28,7 @@
     [self drawBoard];
 }
 
-#pragma - Draw methods
+#pragma mark - Draw methods
 
 - (void) drawBoard {
     
@@ -39,6 +39,7 @@
     self.containerForBoard = view;
     self.containerForBoard.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
                                               UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    
     self.containerForBoard.backgroundColor = [UIColor whiteColor];
     self.containerForBoard.layer.borderColor = [UIColor blackColor].CGColor;
     self.containerForBoard.layer.borderWidth = 2.0f;
@@ -60,7 +61,11 @@
         }
     }
     
-    // draw checkers
+    [self drawCheckers:chessBoardCellWidth];
+}
+
+- (void) drawCheckers:(CGFloat) chessBoardCellWidth {
+    
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             if ((i + j) % 2 == 0) {
@@ -68,7 +73,7 @@
                 UIView *squareView = [[UIView alloc] initWithFrame:CGRectMake(chessBoardCellWidth * j + 4 + originForChecker, chessBoardCellWidth * i + 4 + originForChecker,
                                                                               chessBoardCellWidth - originForChecker * 2, chessBoardCellWidth - originForChecker * 2)];
                 squareView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
-                                              UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+                UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
                 squareView.layer.cornerRadius = chessBoardCellWidth * 0.3;
                 
                 if (i < 3) {
@@ -85,7 +90,7 @@
     }
 }
 
-#pragma - Rotate screen
+#pragma mark - Rotate screen
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     CGFloat r = (CGFloat) (arc4random() % 255) / 255.f;
@@ -101,7 +106,7 @@
     [self swapRandomAmmountOfCheckers];
 }
 
-#pragma - Swap checkers methods
+#pragma mark - Swap checkers methods
 
 - (void) swapRandomAmmountOfCheckers {
     NSUInteger countOfSwaps = arc4random() % [self.firstPlayerCheckers count];
@@ -123,6 +128,8 @@
         checkerSecond.frame = frameFirst;
     }];
 }
+
+#pragma mark - UIController methods
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
