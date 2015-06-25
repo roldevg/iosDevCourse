@@ -11,6 +11,7 @@
 #import "REACycler.h"
 #import "REARunner.h"
 #import "REASwimmer.h"
+#import "READancer.h"
 
 @interface AppDelegate ()
 
@@ -50,11 +51,19 @@
     swimmer.gender = GenderMale;
     [swimmer move];
     
-    NSArray* crowdPeople = [NSArray arrayWithObjects:human, cycler, runner, swimmer, nil];
+    READancer* dancer = [[READancer alloc] init];
+    dancer.name = @"Michael Jackson";
+    dancer.weight = 70;
+    dancer.height = 170;
+    dancer.gender = GenderMale;
+    dancer.style = @"Break dance";
+    dancer.secondName = @"Joseph";
+    [dancer move];
     
-    for (int i = 0; i < [crowdPeople count]; i++) {
-        REAHuman* human = crowdPeople[i];
-        NSLog(@"%@", human);
+    NSArray* crowdPeople = [NSArray arrayWithObjects:human, cycler, runner, swimmer, dancer, nil];
+    
+    for (NSUInteger i = [crowdPeople count] - 1; i > 0; i--) {
+        NSLog(@"%@", crowdPeople[i]);
     }
     
     return YES;

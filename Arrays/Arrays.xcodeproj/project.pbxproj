@@ -18,6 +18,10 @@
 		A46A35401B39FB0800DBDC6B /* REACycler.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A353F1B39FB0800DBDC6B /* REACycler.m */; };
 		A46A35431B39FBEC00DBDC6B /* REARunner.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A35421B39FBEC00DBDC6B /* REARunner.m */; };
 		A46A35481B39FC6F00DBDC6B /* REASwimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A35471B39FC6F00DBDC6B /* REASwimmer.m */; };
+		A4EB1E8A1B3C996E00C835B0 /* READancer.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB1E891B3C996E00C835B0 /* READancer.m */; };
+		A4EB1E8E1B3C9F4600C835B0 /* REAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB1E8D1B3C9F4600C835B0 /* REAnimal.m */; };
+		A4EB1E911B3CA30B00C835B0 /* READog.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB1E901B3CA30B00C835B0 /* READog.m */; };
+		A4EB1E941B3CA37300C835B0 /* REACat.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB1E931B3CA37300C835B0 /* REACat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,14 @@
 		A46A35421B39FBEC00DBDC6B /* REARunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REARunner.m; sourceTree = "<group>"; };
 		A46A35461B39FC6F00DBDC6B /* REASwimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REASwimmer.h; sourceTree = "<group>"; };
 		A46A35471B39FC6F00DBDC6B /* REASwimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REASwimmer.m; sourceTree = "<group>"; };
+		A4EB1E881B3C996E00C835B0 /* READancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = READancer.h; sourceTree = "<group>"; };
+		A4EB1E891B3C996E00C835B0 /* READancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = READancer.m; sourceTree = "<group>"; };
+		A4EB1E8C1B3C9F4600C835B0 /* REAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REAnimal.h; sourceTree = "<group>"; };
+		A4EB1E8D1B3C9F4600C835B0 /* REAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REAnimal.m; sourceTree = "<group>"; };
+		A4EB1E8F1B3CA30B00C835B0 /* READog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = READog.h; sourceTree = "<group>"; };
+		A4EB1E901B3CA30B00C835B0 /* READog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = READog.m; sourceTree = "<group>"; };
+		A4EB1E921B3CA37200C835B0 /* REACat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REACat.h; sourceTree = "<group>"; };
+		A4EB1E931B3CA37300C835B0 /* REACat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REACat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +105,7 @@
 		A46A35141B39F5C300DBDC6B /* Arrays */ = {
 			isa = PBXGroup;
 			children = (
+				A4EB1E8B1B3C9F3000C835B0 /* Animals */,
 				A46A35441B39FC2700DBDC6B /* Humans */,
 				A46A35191B39F5C300DBDC6B /* AppDelegate.h */,
 				A46A351A1B39F5C300DBDC6B /* AppDelegate.m */,
@@ -143,8 +156,23 @@
 				A46A35421B39FBEC00DBDC6B /* REARunner.m */,
 				A46A35461B39FC6F00DBDC6B /* REASwimmer.h */,
 				A46A35471B39FC6F00DBDC6B /* REASwimmer.m */,
+				A4EB1E881B3C996E00C835B0 /* READancer.h */,
+				A4EB1E891B3C996E00C835B0 /* READancer.m */,
 			);
 			name = Humans;
+			sourceTree = "<group>";
+		};
+		A4EB1E8B1B3C9F3000C835B0 /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				A4EB1E8C1B3C9F4600C835B0 /* REAnimal.h */,
+				A4EB1E8D1B3C9F4600C835B0 /* REAnimal.m */,
+				A4EB1E8F1B3CA30B00C835B0 /* READog.h */,
+				A4EB1E901B3CA30B00C835B0 /* READog.m */,
+				A4EB1E921B3CA37200C835B0 /* REACat.h */,
+				A4EB1E931B3CA37300C835B0 /* REACat.m */,
+			);
+			name = Animals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +277,13 @@
 			files = (
 				A46A351E1B39F5C300DBDC6B /* ViewController.m in Sources */,
 				A46A35431B39FBEC00DBDC6B /* REARunner.m in Sources */,
+				A4EB1E911B3CA30B00C835B0 /* READog.m in Sources */,
 				A46A351B1B39F5C300DBDC6B /* AppDelegate.m in Sources */,
+				A4EB1E8A1B3C996E00C835B0 /* READancer.m in Sources */,
 				A46A35181B39F5C300DBDC6B /* main.m in Sources */,
 				A46A353D1B39F73400DBDC6B /* REAHuman.m in Sources */,
+				A4EB1E941B3CA37300C835B0 /* REACat.m in Sources */,
+				A4EB1E8E1B3C9F4600C835B0 /* REAnimal.m in Sources */,
 				A46A35401B39FB0800DBDC6B /* REACycler.m in Sources */,
 				A46A35481B39FC6F00DBDC6B /* REASwimmer.m in Sources */,
 			);
