@@ -12,6 +12,8 @@
 #import "REARunner.h"
 #import "REASwimmer.h"
 #import "READancer.h"
+#import "READog.h"
+#import "REACat.h"
 
 @interface AppDelegate ()
 
@@ -59,6 +61,14 @@
     dancer.style = @"Break dance";
     dancer.secondName = @"Joseph";
     [dancer move];
+    
+    READog* dog = [[READog alloc] init];
+    dog.nickname = @"Rex";
+    [dog move];
+    
+    REACat* cat = [[REACat alloc] init];
+    cat.nickname = @"Tom";
+    [cat move];
     
     NSArray* crowdPeople = [NSArray arrayWithObjects:human, cycler, runner, swimmer, dancer, nil];
     
