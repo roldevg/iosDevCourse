@@ -15,6 +15,8 @@
 #import "READog.h"
 #import "REACat.h"
 
+#import "Fraction.h"
+
 @interface AppDelegate ()
 
 @end
@@ -71,12 +73,42 @@
     [cat move];
     
     NSArray* crowdPeople = [NSArray arrayWithObjects:human, cycler, runner, swimmer, dancer, nil];
+    NSArray* animals = [NSArray arrayWithObjects:dog, cat, nil];
     
+    /*
     for (NSUInteger i = [crowdPeople count] - 1; i > 0; i--) {
-        NSLog(@"%@", crowdPeople[i]);
+        NSObject* obj = [crowdPeople objectAtIndex:i];
+        if ([obj isKindOfClass:[REAHuman class]]) {
+            REAHuman* human = (REAHuman*) obj;
+            NSLog(@"It's human!");
+            NSLog(@"%@", human);
+        }
+    }*/
+    
+    NSUInteger countHumans = [crowdPeople count];
+    NSUInteger countAnimals = [animals count];
+    NSUInteger countCycle = MAX(countHumans, countAnimals);
+    
+    for (int i = 0; i < countCycle; i++) {
+        if (i < countHumans) {
+            NSLog(@"%@", [crowdPeople objectAtIndex:i]);
+        }
+        if (i < countAnimals) {
+            NSLog(@"%@", [animals objectAtIndex:i]);
+        }
     }
     
+    [self fractionTest];
+    
     return YES;
+}
+
+- (void) fractionTest {
+    // Fraction* myFraction = [[Fraction alloc] init];
+    Fraction* myFraction = [Fraction new];
+    myFraction.numerator = 1;
+    myFraction.denominator = 3;
+    [myFraction print];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

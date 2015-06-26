@@ -22,6 +22,7 @@
 		A4EB1E8E1B3C9F4600C835B0 /* REAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB1E8D1B3C9F4600C835B0 /* REAnimal.m */; };
 		A4EB1E911B3CA30B00C835B0 /* READog.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB1E901B3CA30B00C835B0 /* READog.m */; };
 		A4EB1E941B3CA37300C835B0 /* REACat.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB1E931B3CA37300C835B0 /* REACat.m */; };
+		A4EB1E981B3DDF8A00C835B0 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB1E971B3DDF8A00C835B0 /* Fraction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		A4EB1E901B3CA30B00C835B0 /* READog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = READog.m; sourceTree = "<group>"; };
 		A4EB1E921B3CA37200C835B0 /* REACat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REACat.h; sourceTree = "<group>"; };
 		A4EB1E931B3CA37300C835B0 /* REACat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REACat.m; sourceTree = "<group>"; };
+		A4EB1E961B3DDF8A00C835B0 /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		A4EB1E971B3DDF8A00C835B0 /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 		A46A35141B39F5C300DBDC6B /* Arrays */ = {
 			isa = PBXGroup;
 			children = (
+				A4EB1E951B3DDF5D00C835B0 /* Fraction */,
 				A4EB1E8B1B3C9F3000C835B0 /* Animals */,
 				A46A35441B39FC2700DBDC6B /* Humans */,
 				A46A35191B39F5C300DBDC6B /* AppDelegate.h */,
@@ -173,6 +177,15 @@
 				A4EB1E931B3CA37300C835B0 /* REACat.m */,
 			);
 			name = Animals;
+			sourceTree = "<group>";
+		};
+		A4EB1E951B3DDF5D00C835B0 /* Fraction */ = {
+			isa = PBXGroup;
+			children = (
+				A4EB1E961B3DDF8A00C835B0 /* Fraction.h */,
+				A4EB1E971B3DDF8A00C835B0 /* Fraction.m */,
+			);
+			name = Fraction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +299,7 @@
 				A4EB1E8E1B3C9F4600C835B0 /* REAnimal.m in Sources */,
 				A46A35401B39FB0800DBDC6B /* REACycler.m in Sources */,
 				A46A35481B39FC6F00DBDC6B /* REASwimmer.m in Sources */,
+				A4EB1E981B3DDF8A00C835B0 /* Fraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
