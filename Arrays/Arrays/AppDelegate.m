@@ -14,8 +14,11 @@
 #import "READancer.h"
 #import "READog.h"
 #import "REACat.h"
-
 #import "Fraction.h"
+
+#import "REAJumpers.h"
+#import "REASwimmers.h"
+#import "REARunners.h"
 
 @interface AppDelegate ()
 
@@ -110,27 +113,24 @@
         return true;
     }];
     
-    /*    NSSortDescriptor *humanDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES selector:localizedCaseInsensitiveCompare:];
-     NSArray *sortedPeople = [people sortedArrayUsingDescriptors:[NSArray arrayWithObjects:humanDescriptor,nil]];
-     
-     
-     NSSortDescriptor *animalDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:localizedCaseInsensitiveCompare:];
-     NSArray *sortedAnimals = [animals sortedArrayUsingDescriptors:[NSArray arrayWithObjects:animalDescriptor, nil]];
-     
-     NSMutableArray *sortedAll = [[NSMutableArray alloc]init];
-     
-     for (id obj in sortedPeople) {
-     [sortedAll addObject:obj];
-     }
-     for (id obj in sortedAnimals) {
-     [sortedAll addObject:obj];
-     }
-     */
-    
-    //    NSArray* array =
-    // ===============
+    [self testProtocols:sortedArray];
     
     return YES;
+}
+
+- (void) testProtocols:(NSArray*)array {
+    for (id object in array) {
+        if ([object conformsToProtocol:@protocol(REAJumpers)]) {
+            NSLog(@"New jumper! %@, %@, It can jump to %f. No warm up!", [object class], [object name], [object maxJumpHeight]);
+            [object warmUp];
+            NSLog(@"Now jump!");
+            [object jump];
+            if ([object respondsToSelector:@selector(parkour)]) {
+                NSLog(@"And look -- the parkour");
+                [object parkour];
+            }
+        }
+    }
 }
 
 - (void) fractionTest {

@@ -36,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A437E9FC1B409DB100C947BC /* REASwimmers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REASwimmers.h; sourceTree = "<group>"; };
+		A437E9FD1B409DD400C947BC /* REAJumpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REAJumpers.h; sourceTree = "<group>"; };
+		A437E9FE1B409DDE00C947BC /* REARunners.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REARunners.h; sourceTree = "<group>"; };
+		A437EA011B40A08600C947BC /* READistance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = READistance.h; sourceTree = "<group>"; };
 		A46A35121B39F5C300DBDC6B /* Arrays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arrays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A35161B39F5C300DBDC6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46A35171B39F5C300DBDC6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -162,6 +166,10 @@
 				A46A35471B39FC6F00DBDC6B /* REASwimmer.m */,
 				A4EB1E881B3C996E00C835B0 /* READancer.h */,
 				A4EB1E891B3C996E00C835B0 /* READancer.m */,
+				A437E9FC1B409DB100C947BC /* REASwimmers.h */,
+				A437E9FD1B409DD400C947BC /* REAJumpers.h */,
+				A437E9FE1B409DDE00C947BC /* REARunners.h */,
+				A437EA011B40A08600C947BC /* READistance.h */,
 			);
 			name = Humans;
 			sourceTree = "<group>";

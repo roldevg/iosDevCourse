@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "READistance.h"
+#import "REARunners.h"
+#import "REAJumpers.h"
 
 typedef enum {
     GenderMale = 0,
