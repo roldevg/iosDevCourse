@@ -17,7 +17,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self seeFight];
+    
     return YES;
+}
+
+- (void) seeFight {
+    CGRect android = CGRectMake(3, 3, 3, 3);
+    int countNumber = 1;
+    int goal = 3;
+    while(true) {
+        CGPoint pointTemp = CGPointMake((arc4random() % 11), (arc4random() % 11));
+        BOOL goalAttempt = CGRectContainsPoint(android, pointTemp);
+        if (goalAttempt) {
+            NSLog(@"point %ld = %@ wounded enemy android!", (long)countNumber, NSStringFromCGPoint(pointTemp));
+            goal--;
+        } else {
+            NSLog(@"point %ld = %@", (long)countNumber, NSStringFromCGPoint(pointTemp));
+        }
+        if (goal == 0) {
+            NSLog(@"You win! Attempts: %d", countNumber);
+            break;
+        }
+        countNumber++;
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
