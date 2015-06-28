@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "READataTypes.h"
 
 @interface AppDelegate ()
 
@@ -17,10 +18,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    [self workWithStructures];
     
     [self seeFight];
     
     return YES;
+}
+
+- (void) workWithStructures {
+    NSString* mainString = @"This is long string";
+    NSRange subStringRange = [mainString rangeOfString:@"long"];
+    
+    NSLog(@"%lu", (unsigned long)subStringRange.location);
+    NSLog(@"%lu", (unsigned long)subStringRange.length);
+    
+    NSString* firstString = @"Hello world!";
+    NSString* secondString = @"Hello world!";
+    NSString* thirdString = @"Hello world!";
+    
+    NSString* name = @"John";
+    name = [name stringByAppendingString:@"ny"];
+    
+    NSMutableString* stringName = [NSMutableString stringWithString:@"John"];
+    [stringName appendString:@"ny"];
+    
+    NSLog(@"firstString = %@, secondString = %@, thirdString = %@, name = %@, stringName = %@",
+          firstString, secondString, thirdString, name, stringName);
 }
 
 - (void) seeFight {

@@ -74,16 +74,7 @@
     
     NSArray* crowdPeople = [NSArray arrayWithObjects:human, cycler, runner, swimmer, dancer, nil];
     NSArray* animals = [NSArray arrayWithObjects:dog, cat, nil];
-    
-    /*
-    for (NSUInteger i = [crowdPeople count] - 1; i > 0; i--) {
-        NSObject* obj = [crowdPeople objectAtIndex:i];
-        if ([obj isKindOfClass:[REAHuman class]]) {
-            REAHuman* human = (REAHuman*) obj;
-            NSLog(@"It's human!");
-            NSLog(@"%@", human);
-        }
-    }*/
+    NSArray* commonArray = [NSArray arrayWithObjects:human, cycler, runner, swimmer, dancer, dog, cat, nil];
     
     NSUInteger countHumans = [crowdPeople count];
     NSUInteger countAnimals = [animals count];
@@ -99,6 +90,45 @@
     }
     
     [self fractionTest];
+    
+    
+    NSArray* unsortedArray = [NSArray arrayWithObjects:human, cycler, runner, swimmer, dancer, dog, cat, nil];
+    NSArray* sortedArray = [unsortedArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        if ([obj1 isKindOfClass:[REAHuman class]] && [obj2 isKindOfClass:[REAHuman class]]) {
+            REAHuman* human1 = (REAHuman*) obj1;
+            REAHuman* human2 = (REAHuman*) obj2;
+            return [[human1 name] compare:[human2 name]];
+        } else if ([obj1 isKindOfClass:[REAnimal class]] && [obj2 isKindOfClass:[REAnimal class]]) {
+            REAnimal* animal1 = (REAnimal*) obj1;
+            REAnimal* animal2 = (REAnimal*) obj2;
+            return [[animal1 nickname] compare:[animal2 nickname]];
+        } else if ([obj1 isKindOfClass:[REAnimal class]]) {
+            return (NSComparisonResult) NSOrderedAscending;
+        } else {
+            return (NSComparisonResult) NSOrderedSame;
+        }
+        return true;
+    }];
+    
+    /*    NSSortDescriptor *humanDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES selector:localizedCaseInsensitiveCompare:];
+     NSArray *sortedPeople = [people sortedArrayUsingDescriptors:[NSArray arrayWithObjects:humanDescriptor,nil]];
+     
+     
+     NSSortDescriptor *animalDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:localizedCaseInsensitiveCompare:];
+     NSArray *sortedAnimals = [animals sortedArrayUsingDescriptors:[NSArray arrayWithObjects:animalDescriptor, nil]];
+     
+     NSMutableArray *sortedAll = [[NSMutableArray alloc]init];
+     
+     for (id obj in sortedPeople) {
+     [sortedAll addObject:obj];
+     }
+     for (id obj in sortedAnimals) {
+     [sortedAll addObject:obj];
+     }
+     */
+    
+    //    NSArray* array =
+    // ===============
     
     return YES;
 }
