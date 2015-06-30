@@ -114,8 +114,52 @@
     }];
     
     [self testProtocols:sortedArray];
+    [self workWithDictionary];
     
     return YES;
+}
+
+- (void) workWithDictionary {
+    REACycler* cycler1 = [[REACycler alloc] init];
+    cycler1.name = @"Lance1";
+    cycler1.weight = 70;
+    
+    REACycler* cycler2 = [[REACycler alloc] init];
+    cycler2.name = @"Lance2";
+    cycler2.weight = 80;
+    
+    REACycler* cycler3 = [[REACycler alloc] init];
+    cycler3.name = @"Lance3";
+    cycler3.weight = 90;
+    
+    REACycler* cycler4 = [[REACycler alloc] init];
+    cycler4.name = @"Lance4";
+    cycler4.weight = 100;
+    
+    REACycler* cycler5 = [[REACycler alloc] init];
+    cycler5.name = @"Lance5";
+    cycler5.weight = 110;
+    
+    NSDictionary* cyclersDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       cycler1, cycler1.name,
+                                       cycler2, cycler2.name,
+                                       cycler3, cycler3.name,
+                                       cycler4, cycler4.name,
+                                       cycler5, cycler5.name, nil];
+    
+    NSArray* sortedKeys = [cyclersDictionary keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [[obj1 name] compare:[obj2 name]];
+    }];
+    
+//    NSSortDescriptor *arrayDesriptorName = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
+//    NSArray* sortedKeysArray = [[cyclersDictionary allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObjects:arrayDesriptorName, nil]];
+    
+    for (id key in sortedKeys) {
+        id tempObj = [cyclersDictionary objectForKey:key];
+        NSLog(@"%@", tempObj);
+    }
+    
+    NSLog(@"%@", cyclersDictionary);
 }
 
 - (void) testProtocols:(NSArray*)array {
