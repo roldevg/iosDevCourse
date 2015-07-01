@@ -28,12 +28,12 @@
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-/*    [UIView animateWithDuration:5
+    [UIView animateWithDuration:5
                      animations:^{
                          
                          self.testView.center = CGPointMake(CGRectGetWidth(self.view.bounds) - CGRectGetWidth(self.testView.frame) / 2, 150);
                          
-                     }];*/
+                     }];
     
     [UIView animateWithDuration:2
                           delay:1
