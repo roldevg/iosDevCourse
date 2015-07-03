@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) UIView* testView;
+@property (weak, nonatomic) UIImageView *testImageview;
 @end
 
 @implementation ViewController
@@ -18,17 +19,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    view.backgroundColor = [UIColor greenColor];
+    //UIView* view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    UIImageView* view = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    view.backgroundColor = [UIColor clearColor];
+    
+    UIImage* image1 = [UIImage imageNamed:@"ImageFiles/1.jpg"];
+    UIImage* image2 = [UIImage imageNamed:@"ImageFiles/2.jpg"];
+    UIImage* image3 = [UIImage imageNamed:@"ImageFiles/3.jpg"];
+    UIImage* image4 = [UIImage imageNamed:@"ImageFiles/4.jpg"];
+    
+    NSArray* images = [NSArray arrayWithObjects:image1, image2, image3, image4, nil];
+    
+    view.animationImages = images;
+    view.animationDuration = 4.f;
+    [view startAnimating];
+
+    
     [self.view addSubview:view];
     
-    self.testView = view;
+    // self.testView = view;
+    self.testImageview = view;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self moveView:self.testView];
+    //[self moveView:self.testView];
+    [self moveView:self.testImageview];
 }
 
 - (void) moveView:(UIView*) view {
@@ -36,8 +53,8 @@
     CGRect rect = self.view.bounds;
     rect = CGRectInset(rect, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame));
     
-    CGFloat x = arc4random() % (int)CGRectGetWidth(rect) + CGRectGetMinX(rect);
-    CGFloat y = arc4random() % (int)CGRectGetHeight(rect) + CGRectGetMinY(rect);
+    CGFloat x = arc4random() % (int)CGRectGetWidth(rect) + CGRectGetMinX(rect) + 50;
+    CGFloat y = arc4random() % (int)CGRectGetHeight(rect) + CGRectGetMinY(rect) + 50;
     
     CGFloat newScale = (float)(arc4random() % 151) / 100.f + 0.5f;
     

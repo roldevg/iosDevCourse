@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40A52661B4721560092A4F9 /* ImageFiles in Resources */ = {isa = PBXBuildFile; fileRef = A40A52651B4721560092A4F9 /* ImageFiles */; };
 		A4FADF451B44729C0073E1B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FADF441B44729C0073E1B3 /* main.m */; };
 		A4FADF481B44729C0073E1B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FADF471B44729C0073E1B3 /* AppDelegate.m */; };
 		A4FADF4B1B44729C0073E1B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FADF4A1B44729C0073E1B3 /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A40A52651B4721560092A4F9 /* ImageFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ImageFiles; sourceTree = "<group>"; };
 		A4FADF3F1B44729C0073E1B3 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FADF431B44729C0073E1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4FADF441B44729C0073E1B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				A4FADF4C1B44729C0073E1B3 /* Main.storyboard */,
 				A4FADF4F1B44729C0073E1B3 /* Images.xcassets */,
 				A4FADF511B44729C0073E1B3 /* LaunchScreen.xib */,
+				A40A52651B4721560092A4F9 /* ImageFiles */,
 				A4FADF421B44729C0073E1B3 /* Supporting Files */,
 			);
 			path = Animations;
@@ -199,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40A52661B4721560092A4F9 /* ImageFiles in Resources */,
 				A4FADF4E1B44729C0073E1B3 /* Main.storyboard in Resources */,
 				A4FADF531B44729C0073E1B3 /* LaunchScreen.xib in Resources */,
 				A4FADF501B44729C0073E1B3 /* Images.xcassets in Resources */,
@@ -418,6 +422,7 @@
 				A4FADF641B44729C0073E1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4FADF651B44729C0073E1B3 /* Build configuration list for PBXNativeTarget "AnimationsTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +431,7 @@
 				A4FADF671B44729C0073E1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
