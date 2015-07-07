@@ -19,7 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //UIView* view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [self paintHuman];
+}
+
+- (void) paintHuman {
     UIImageView* view = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     view.backgroundColor = [UIColor clearColor];
     
@@ -33,11 +36,8 @@
     view.animationImages = images;
     view.animationDuration = 4.f;
     [view startAnimating];
-
     
     [self.view addSubview:view];
-    
-    // self.testView = view;
     self.testImageview = view;
 }
 
