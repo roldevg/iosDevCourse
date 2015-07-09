@@ -15,7 +15,48 @@
     // [super drawRect:rect];
     NSLog(@"drawRect %@", NSStringFromCGRect(rect));
     
-    [self studyDrawings];
+    //[self studyDrawings];
+    [self paintManualChessDesk:rect];
+    
+}
+
+- (void) paintManualChessDesk:(CGRect)rect {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGFloat offset = 50.f;
+    CGFloat borderWidth = 4.f;
+    
+    CGFloat maxBoardSize = MIN(CGRectGetWidth(rect) - offset * 2 - borderWidth * 2,
+                               CGRectGetHeight(rect) - offset * 2 - borderWidth * 2);
+    
+    int cellSize = (int) maxBoardSize / 8;
+    int boardSize = cellSize * 8;
+    
+    CGRect boardRect = CGRectMake((CGRectGetWidth(rect) - boardSize) / 2,
+                                 (CGRectGetHeight(rect) - boardSize) / 2,
+                                 boardSize, boardSize);
+    
+    boardRect = CGRectIntegral(boardRect);
+    
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if (i % 2 != j % 2) {
+                CGRect cellRect = CGRectMake(CGRectGetMinX(boardRect) + i * cellSize,
+                                             CGRectGetMinY(boardRect) + j * cellSize,
+                                             cellSize, cellSize);
+                
+                CGContextAddRect(context, cellRect);
+            }
+        }
+    }
+    
+    CGContextSetFillColorWithColor(context, [UIColor grayColor].CGColor);
+    CGContextFillPath(context);
+    
+    CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextAddRect(context, boardRect);
+    CGContextSetLineCap(context, borderWidth);
+    CGContextStrokePath(context);
 }
 
 - (void) studyDrawings {
