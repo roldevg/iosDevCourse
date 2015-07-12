@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="15A215h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qbA-il-dwq">
+                                <rect key="frame" x="0.0" y="285" width="600" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="actionSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="y4b-mk-TVy"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPC-IA-tl5">
+                                <rect key="frame" x="279" y="244" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="onz-rT-tpf">
+                                <rect key="frame" x="-9" y="352" width="600" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="actionSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="x30-qz-qtN"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6EC-mU-BCE">
+                                <rect key="frame" x="-9" y="409" width="600" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="actionSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jxa-z4-mVf"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38w-wh-GVR">
+                                <rect key="frame" x="57" y="228" width="51" height="31"/>
+                                <animations/>
+                                <color key="tintColor" red="0.55771531716741829" green="0.40099941510208981" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="actionSwitchEnable:" destination="BYZ-38-t0r" eventType="valueChanged" id="TYK-qq-cji"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="enabled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwO-vb-J4V">
+                                <rect key="frame" x="121" y="233" width="62" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GdF-o7-QCv">
+                                <rect key="frame" x="240" y="187" width="83" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="RGB"/>
+                                    <segment title="HSB"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="6EC-mU-BCE" id="URw-r1-ql6"/>
+                        <outlet property="colorSchemeControl" destination="GdF-o7-QCv" id="xOM-TM-igK"/>
+                        <outlet property="greenSlider" destination="onz-rT-tpf" id="KMV-5d-8SS"/>
+                        <outlet property="infoLbl" destination="PPC-IA-tl5" id="f1t-T0-oX9"/>
+                        <outlet property="redslider" destination="qbA-il-dwq" id="Qrl-Ss-Hnc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
